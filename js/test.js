@@ -124,3 +124,67 @@
 //     return responseArrey;
 // }
 
+// -------------------------22.12.2020
+// сгенерировать массив случ.чисел +  перевести четные в нечетные
+// получить максимальное нечетное число +  не дольше 1 строки;
+
+// const generateRandomArr = (count, min, max, callback) => {
+//     let arr = [];
+//     for (let i = 0; i < count; i++) arr.push(parseInt(Math.random() * (max - min) + min));
+//     if (callback !== undefined) return callback(arr);
+//     return arr;
+// }
+
+// console.log(generateRandomArr(100, 10, 100, (arr) => {
+//     console.log(arr);
+//     let new_array = arr.map(item => ++item);
+//     let newArr = new_array.filter(item => item % 2 !== 0);
+//     let maxNumber = Math.max(...newArr);
+//     console.log(new_array);
+//     console.log(newArr);
+//     console.log(maxNumber);
+// }));
+
+// тоже самое но в одну строку
+
+// console.log(
+//     generateRandomArr(100, 10, 100, arr =>
+//         Math.max(...arr.map(item => ++item).filter(item => item % 2 !== 0)),
+//     ),
+// );
+
+
+// ==============================
+
+//сформировать случ. строку из символов и цифр,
+//отфильтровать строку на цифры => получить среднее арифметическое полученных цифр
+
+// const baseString = 'abcdefghijklmnopqrstuvwxyz0123456789';
+
+// const generateRandomString = (length, callback) => {
+//     let randomValue = '';
+//     for (let i = 0; i < length; i++)
+//         randomValue += baseString[parseInt(Math.random() * baseString.length)];
+
+//     if (callback !== undefined) return callback(randomValue);
+//     return randomValue;
+// };
+
+// const tempFn = str => {
+//     const arrayNum = str
+//         .split('')
+//         .filter(item => !Number.isNaN(Number(item)))
+//         .map(item => (item = parseInt(item)));
+//     let total = 0;
+//     arrayNum.forEach(element => {
+//         total += element;
+//     });
+//     return total / arrayNum.length;
+// }
+
+// console.log(generateRandomString(250, tempFn));
+
+// ================================
+
+
+
